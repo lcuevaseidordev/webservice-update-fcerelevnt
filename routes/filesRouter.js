@@ -6,8 +6,8 @@ const fileRoutes = Router();
 //Post Method
 fileRoutes.post("/submit-lictradnum", async (req, res, next) => {
   //console.log(req.body);
-  fetchGetGrandesEmpresas(req.body).then((res) => {
-    res.status(200).json({ message: "Object successfully received", data: res});
+  fetchGetGrandesEmpresas(req.body).then((resFetch) => {
+    res.status(200).json({ message: "Object successfully received", data: resFetch});
   })
 });
 
