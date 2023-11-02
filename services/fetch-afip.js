@@ -84,6 +84,7 @@ async function fetchGetGrandesEmpresas(LicTradNum) {
       );
       console.log(patchFCERelevntResponse.status)
     }
+    return resultArray;
   } catch (error) {
     console.log("[FETCH AFIP]: error", error);
     throw error;
