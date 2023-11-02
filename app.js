@@ -9,6 +9,7 @@ import path from 'path';
 const app = express();
 app.use(cors())
 app.use(express.json());
+const port = process.env.PORT || 8080;
 
 // Path
 const __filename = fileURLToPath(import.meta.url)
@@ -24,6 +25,6 @@ app.get("/",function(req,res){
 
 app.use('/api', fileRoutes)
 
-app.listen(5000, () => {
-    console.log(`Server Started at ${5000}`)
+app.listen(port, () => {
+    console.log(`Server Started at ${port}`)
 })
